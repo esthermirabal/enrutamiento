@@ -1,0 +1,20 @@
+<div class="container justify-content-center">
+  <img src="https://miro.medium.com/v2/resize:fit:1125/1*6S1nFUgi_payS5Lxhtv05A.png" alt="Texto alternativo de la imagen">
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 mx-auto text-center">
+      <h4>Comandos de Git</h4>
+      <div class="form-group">
+        <select class="form-control form-control-lg" (change)="onCommandChange($event)">
+          <option *ngFor="let command of comandosGit" [value]="command.nombre">{{ command.nombre}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6 mx-auto text-center">
+      <h4>Información del Comando</h4>
+      <p class="lead text-dark"><strong>{{ seleccionarComando.descripcion }}</strong></p>
+    </div>
+  </div>
+</div>
